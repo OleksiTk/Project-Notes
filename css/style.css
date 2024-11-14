@@ -1,0 +1,160 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html,
+body {
+  font-family: Paprika;
+  background: rgba(249, 73, 182, 1);
+  background: -o-linear-gradient(
+    -225deg,
+    rgba(249, 73, 182, 1) 0%,
+    rgba(249, 73, 182, 1) 24.5%,
+    rgba(255, 139, 139, 1) 88.5%
+  );
+  background: -moz-linear-gradient(
+    -225deg,
+    rgba(249, 73, 182, 1) 0%,
+    rgba(249, 73, 182, 1) 24.5%,
+    rgba(255, 139, 139, 1) 88.5%
+  );
+  background: -webkit-linear-gradient(
+    -225deg,
+    rgba(249, 73, 182, 1) 0%,
+    rgba(249, 73, 182, 1) 24.5%,
+    rgba(255, 139, 139, 1) 88.5%
+  );
+  background: linear-gradient(
+    -45deg,
+    rgba(249, 73, 182, 1) 0%,
+    rgba(249, 73, 182, 1) 24.5%,
+    rgba(255, 139, 139, 1) 88.5%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f949b6", endColorstr="#ff8b8b",GradientType=1 );
+  height: 100%;
+  line-height: 1;
+}
+textarea,
+button,
+input {
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+button {
+  cursor: pointer;
+  background-color: inherit;
+}
+/*--------------------------------------------------------*/
+.wrapper {
+  padding-top: 100px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper > main {
+  flex-grow: 1;
+}
+
+[class*="__container"] {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/*--------------------------------------------------------*/
+
+.notes__container {
+}
+.logo__text {
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.logo__text span {
+  padding-left: 20px;
+  font-size: 45px;
+  color: aliceblue;
+}
+.create__notes {
+  background-color: rgb(252, 109, 158);
+  padding: 15px 50px;
+  border-radius: 20px;
+  color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/*--------------------------------------------------------*/
+.creat-notes--write {
+  position: relative;
+  margin: 20px 0 0 0; /* Вирівнює елемент до лівого краю */
+  padding: 10px 20px; /* Додає внутрішні відступи */
+  background-color: aliceblue;
+  font-size: 20px;
+  width: 35%; /* або бажану ширину */
+  min-height: 190px;
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-start; /* Вирівнює вміст по верхньому краю */
+  justify-content: flex-start; /* Вирівнює вміст по лівому краю */
+}
+
+.creat-notes__container {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(60%, 2fr) /* Змінена мінімальна ширина на 300px */
+  ); /* Розподіл елементів в кілька колонок */
+  justify-items: start; /* Вирівнювання елементів по лівому краю */
+  padding-top: 20px;
+  gap: 20px; /* Додає відстань між елементами */
+}
+
+.creat-notes--input__box {
+  width: 100%;
+  min-height: 100%; /* Забезпечує, що текст займатиме всю доступну висоту */
+  padding: 10px;
+  font-family: "Paprika", sans-serif; /* Додає шрифт, якщо потрібно */
+  font-size: 20px;
+  line-height: 1.5;
+  border: none; /* Прибирає стандартний бордер */
+  outline: none; /* Прибирає обведення при фокусі */
+  resize: none; /* Прибирає можливість зміни розміру textarea */
+}
+.creat-notes--delet {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
